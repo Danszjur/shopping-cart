@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Nav } from "../styles/nav.style";
+import { Nav } from "../styles/Nav.style";
 
 export default function NavBar({ displayedText }) {
   return (
