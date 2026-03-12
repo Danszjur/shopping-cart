@@ -17,13 +17,7 @@ body {
   padding: 30px;
 
   display: grid;
-  grid-template-columns: repeat(5, 340px);
+  grid-template-columns: repeat(4, 320px);
   row-gap: 30px;
   justify-self: center;
-}
-@media (max-width: 450px) {
-  .shop-main {
-    grid-template-columns: repeat(1, 450px);
-    margin: auto;
-  }
 }

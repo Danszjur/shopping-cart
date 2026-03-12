@@ -1,10 +1,5 @@
-import NavBar from "../components/NavBar";
 import "../styles/global.css";
 
 export default function Home() {
-  return (
-    <>
-      <NavBar displayedText="Home" />
-    </>
-  );
+  return <h1>This is the Home page</h1>;
 }

@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   height: 90px;
   display: flex;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
 
   & > p {
     margin-left: 20px;
@@ -14,14 +14,6 @@ export const Nav = styled.nav`
     font-size: 2rem;
     text-shadow: 2px 2px 10px black;
     user-select: none;
-  }
-
-  & > div {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 30px;
   }
 
   & > div > a {
@@ -42,5 +34,22 @@ export const Nav = styled.nav`
       transform: translateY(0px);
       box-shadow: none;
     }
+  }
+`;
+
+export const CartIcon = styled.div`
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 50px;
+  padding: 20px;
+  position: relative;
+  right: 20px;
+  & > a {
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: indianred;
   }
 `;

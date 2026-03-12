@@ -1,9 +1,11 @@
 import NavBar from "../components/NavBar";
 import CardElement from "../components/CardElement";
 import { useEffect, useState } from "react";
+import { useOutletContext } from "react-router";
 
 export default function Shop() {
   const [products, setProducts] = useState([]);
+  const { putInCart } = useOutletContext();
 
   useEffect(() => {
     async function fetchProduct() {
@@ -17,7 +19,6 @@ export default function Shop() {
 
   return (
     <>
-      <NavBar displayedText="Shop" />
       <main className="shop-main">
         {products.map((product) => (
           <CardElement
@@ -27,6 +28,7 @@ export default function Shop() {
               price: product.price,
               url: product.image,
             }}
+            BtnOnClick={putInCart}
           />
         ))}
       </main>

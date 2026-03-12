@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card } from "../styles/Card.style";
 import { QuantityButton, AddToCartButton } from "../styles/Buttons.style";
 
-export default function CardElement({ product }) {
+export default function CardElement({ product, BtnOnClick }) {
   const [quantity, setQuantity] = useState(1);
 
   function addToQuantity(number) {
@@ -25,7 +25,9 @@ export default function CardElement({ product }) {
             <QuantityButton onClick={() => addToQuantity(1)}>+</QuantityButton>
           </div>
           <div className="card-bottom-part">
-            <AddToCartButton>In Cart</AddToCartButton>
+            <AddToCartButton onClick={() => BtnOnClick(product, quantity)}>
+              In Cart
+            </AddToCartButton>
             <p>{product.price} Ft</p>
           </div>
         </div>

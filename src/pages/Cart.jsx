@@ -1,9 +1,11 @@
-import NavBar from "../components/NavBar";
+import { useOutletContext } from "react-router";
+import CardElement from "../components/CardElement";
 
 export default function Cart() {
+  const { itemsInCart } = useOutletContext();
   return (
     <>
-      <NavBar displayedText="Cart" />
+      <main></main>
     </>
   );
 }
